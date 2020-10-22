@@ -5,8 +5,8 @@ October 22, 2020
 
 This program will allow the user to test their regular expressions.
 The user will be provided two fields: a regex field and a string field.
-The regex will be tested if either field contains text. Once the fields 
-are filled out, The user will click the button, where the program will 
+The regex will be tested if any field contains text. Once the fields 
+are filled out, the user will click the button, where the program will 
 determine if there is a match.
 '''
 
@@ -48,7 +48,7 @@ def main():
     window.geometry("600x400")
 
     # Generate the font and size
-    font = ("Verdana", 20)
+    font = ("Comic Sans MS", 20)
 
     # Regex label
     regexLabel = tk.Label(window, text="Enter your regex:", font=font)

@@ -1,2 +1,2 @@
 # Regex Tester
-This program will allow the user to test their regular expressions. The user will be provided two fields: a regex field and a string field. The regex will be tested if either field contains text. Once the fields are filled out, The user will click the button, where the program will determine if there is a match.
+This program will allow the user to test their regular expressions. The user will be provided two fields: a regex field and a string field. The regex will be tested if any field contains text. Once the fields are filled out, the user will click the button, where the program will determine if there is a match.
