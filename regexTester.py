@@ -45,6 +45,7 @@ class RegexTester(object):
             font=self.__font
         )
         self.__regexEntered.place(relx=0.5, y=75, width=600, height=40, anchor=tk.CENTER)
+        self.__regexEntered.bind("<Return>", self.__testRegex)
 
         # String label
         self.__stringLabel = tk.Label(
@@ -62,6 +63,7 @@ class RegexTester(object):
             font=self.__font
         )
         self.__stringEntered.place(relx=0.5, y=200, width=600, height=40, anchor=tk.CENTER)
+        self.__stringEntered.bind("<Return>", self.__testRegex)
 
         # Button (triggers regex test)
         self.__button = tk.Button(
@@ -69,7 +71,8 @@ class RegexTester(object):
             text="Test Regex", 
             command=self.__testRegex, 
             font=self.__font, 
-            bg="#ffff00"
+            bg="#ffff00", # Yellow
+            activebackground="#ffff00" # Yellow
         )
         self.__button.place(relx=0.5, y=300, width=300, anchor=tk.CENTER)
 
@@ -86,7 +89,7 @@ class RegexTester(object):
 
     # Check if there's a match between the regex and string
     # Triggered when the user clicks the button on the screen
-    def __testRegex(self):
+    def __testRegex(self, event=None):
         input_regex = self.__regex.get()
         input_string = self.__string.get()
 
