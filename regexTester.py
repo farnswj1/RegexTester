@@ -3,8 +3,8 @@ Justin Farnsworth
 Regex Tester
 October 22, 2020
 
-This program will allow the user to test their regular expressions.
-The user will be provided two fields: a regex field and a string field.
+This program will allow the user to test their regular expressions. 
+The user will be provided two fields: a regex field and a string field. 
 The regex will be tested if any field contains text. Once the fields 
 are filled out, the user will click the button, where the program will 
 determine if there is a match.
@@ -19,20 +19,19 @@ from re import search
 class RegexTester(object):
     # Constructor
     def __init__(self):
-        # Initalize the window
+        # Initalize and configure the window
         self.__window = tk.Tk()
-
-        # Set the window title and dimensions
         self.__window.title("Regex Tester")
         self.__window.geometry("600x400")
+        self.__window.resizable(width=False, height=False)
 
         # Generate the font and size
         self.__font = ("Comic Sans MS", 20)
 
         # Regex label
         self.__regexLabel = tk.Label(
-            self.__window, 
-            text="Enter your regex:", 
+            self.__window,
+            text="Enter your regex:",
             font=self.__font
         )
         self.__regexLabel.place(relx=0.5, y=25, anchor=tk.CENTER)
@@ -40,8 +39,8 @@ class RegexTester(object):
         # Regex input field
         self.__regex = tk.StringVar()
         self.__regexEntered = tk.Entry(
-            self.__window, 
-            textvariable=self.__regex, 
+            self.__window,
+            textvariable=self.__regex,
             font=self.__font
         )
         self.__regexEntered.place(relx=0.5, y=75, width=600, height=40, anchor=tk.CENTER)
@@ -49,8 +48,8 @@ class RegexTester(object):
 
         # String label
         self.__stringLabel = tk.Label(
-            self.__window, 
-            text="Enter your text:", 
+            self.__window,
+            text="Enter your text:",
             font=self.__font
         )
         self.__stringLabel.place(relx=0.5, y=150, anchor=tk.CENTER)
@@ -58,8 +57,8 @@ class RegexTester(object):
         # String input field
         self.__string = tk.StringVar()
         self.__stringEntered = tk.Entry(
-            self.__window, 
-            textvariable=self.__string, 
+            self.__window,
+            textvariable=self.__string,
             font=self.__font
         )
         self.__stringEntered.place(relx=0.5, y=200, width=600, height=40, anchor=tk.CENTER)
@@ -67,10 +66,10 @@ class RegexTester(object):
 
         # Button (triggers regex test)
         self.__button = tk.Button(
-            self.__window, 
-            text="Test Regex", 
-            command=self.__testRegex, 
-            font=self.__font, 
+            self.__window,
+            text="Test Regex",
+            command=self.__testRegex,
+            font=self.__font,
             bg="#ffff00", # Yellow
             activebackground="#ffff00" # Yellow
         )
@@ -78,7 +77,7 @@ class RegexTester(object):
 
         # Match label
         self.__matchLabel = tk.Label(
-            self.__window, 
+            self.__window,
             font=self.__font
         )
         self.__matchLabel.place(relx=0.5, y=375, anchor=tk.CENTER)
