@@ -29,40 +29,40 @@ class RegexTester(object):
         self.__font = ("Comic Sans MS", 20)
 
         # Regex label
-        self.__regexLabel = tk.Label(
+        self.__regex_label = tk.Label(
             self.__window,
             text="Enter your regex:",
             font=self.__font
         )
-        self.__regexLabel.place(relx=0.5, y=25, anchor=tk.CENTER)
+        self.__regex_label.place(relx=0.5, y=25, anchor=tk.CENTER)
 
         # Regex input field
         self.__regex = tk.StringVar()
-        self.__regexEntered = tk.Entry(
+        self.__regex_entered = tk.Entry(
             self.__window,
             textvariable=self.__regex,
             font=self.__font
         )
-        self.__regexEntered.place(relx=0.5, y=75, width=600, height=40, anchor=tk.CENTER)
-        self.__regexEntered.bind("<Return>", self.__testRegex)
+        self.__regex_entered.place(relx=0.5, y=75, width=600, height=40, anchor=tk.CENTER)
+        self.__regex_entered.bind("<Return>", self.__testRegex)
 
         # String label
-        self.__stringLabel = tk.Label(
+        self.__string_label = tk.Label(
             self.__window,
             text="Enter your text:",
             font=self.__font
         )
-        self.__stringLabel.place(relx=0.5, y=150, anchor=tk.CENTER)
+        self.__string_label.place(relx=0.5, y=150, anchor=tk.CENTER)
 
         # String input field
         self.__string = tk.StringVar()
-        self.__stringEntered = tk.Entry(
+        self.__string_entered = tk.Entry(
             self.__window,
             textvariable=self.__string,
             font=self.__font
         )
-        self.__stringEntered.place(relx=0.5, y=200, width=600, height=40, anchor=tk.CENTER)
-        self.__stringEntered.bind("<Return>", self.__testRegex)
+        self.__string_entered.place(relx=0.5, y=200, width=600, height=40, anchor=tk.CENTER)
+        self.__string_entered.bind("<Return>", self.__testRegex)
 
         # Button (triggers regex test)
         self.__button = tk.Button(
@@ -76,11 +76,11 @@ class RegexTester(object):
         self.__button.place(relx=0.5, y=300, width=300, anchor=tk.CENTER)
 
         # Match label
-        self.__matchLabel = tk.Label(
+        self.__match_label = tk.Label(
             self.__window,
             font=self.__font
         )
-        self.__matchLabel.place(relx=0.5, y=375, anchor=tk.CENTER)
+        self.__match_label.place(relx=0.5, y=375, anchor=tk.CENTER)
 
         # Run the tkinter loop
         self.__window.mainloop()
@@ -106,7 +106,7 @@ class RegexTester(object):
             match_bg = "SystemButtonFace" # Default background color
         
         # Update the match label
-        self.__matchLabel.config(text=result, bg=match_bg)
+        self.__match_label.config(text=result, bg=match_bg)
 
 
 # Execute the program
