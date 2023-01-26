@@ -70,8 +70,8 @@ class RegexTester:
             text="Test Regex",
             command=self.__test_regex,
             font=self.__font,
-            bg="#ffff00", # Yellow
-            activebackground="#ffff00" # Yellow
+            bg="#ffff00",  # Yellow
+            activebackground="#ffff00"  # Yellow
         )
         self.__button.place(relx=0.5, y=300, width=300, anchor=tk.CENTER)
 
@@ -98,13 +98,13 @@ class RegexTester:
             # Check for a match
             if search(input_regex, input_string):
                 result = "There is a match!"
-                match_bg = "#00ff00" # Green
+                match_bg = "#00ff00"  # Green
             else:
                 result = "There is no match."
-                match_bg = "#ff0000" # Red
+                match_bg = "#ff0000"  # Red
         else: # Both fields are empty
             result = "Please fill out the fields above."
-            match_bg = "SystemButtonFace" # Default background color
+            match_bg = "SystemButtonFace"  # Default background color
 
         # Update the match label
         self.__match_label.config(text=result, bg=match_bg)
